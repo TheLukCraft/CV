@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Łukasz Capała - .NET & Angular Developer</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 14mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+            font-size: 10.5px;
+            line-height: 1.3;
+            color: #1a1a1a;
+            background: #fff;
+        }
+
+        body {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 14mm;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header h1 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        header .title {
+            font-size: 12px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .contact-info {
+            font-size: 10px;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .contact-info span {
+            margin: 0 6px;
+        }
+
+        .contact-info span::before {
+            content: "|";
+            margin-right: 12px;
+            color: #999;
+        }
+
+        .contact-info span:first-child::before {
+            content: "";
+            margin-right: 0;
+        }
+
+        /* Main content */
+        main {
+            margin-top: 6px;
+        }
+
+        section {
+            margin-bottom: 8px;
+        }
+
+        section h2 {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1a1a1a;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 3px;
+            margin-bottom: 6px;
+        }
+
+        /* Summary */
+        .summary p {
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        /* Skills */
+        .skills-category {
+            margin-bottom: 3px;
+        }
+
+        .skills-category strong {
+            font-weight: 600;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 8px;
+        }
+
+        .job:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 2px;
+        }
+
+        .job-header h3 {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .job-meta {
+            font-size: 10px;
+            color: #555;
+        }
+
+        .project {
+            margin: 5px 0 5px 0;
+            padding-left: 0;
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 10.5px;
+            margin-bottom: 2px;
+        }
+
+        .tech-stack {
+            font-size: 9.5px;
+            color: #444;
+            margin-top: 2px;
+        }
+
+        .project-link {
+            font-size: 9.5px;
+            color: #444;
+        }
+
+        ul {
+            margin: 3px 0 3px 16px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 2px;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 4px;
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .edu-header h3 {
+            font-size: 10.5px;
+            font-weight: 600;
+        }
+
+        .edu-meta {
+            font-size: 10px;
+            color: #555;
+        }
+
+        .edu-degree {
+            font-size: 10px;
+            color: #333;
+        }
+
+        /* Certifications */
+        .cert-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .cert-list li {
+            margin-bottom: 1px;
+        }
+
+        .cert-list li::before {
+            content: "• ";
+        }
+
+        /* Languages */
+        .languages-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .languages-list li {
+            display: inline;
+        }
+
+        .languages-list li::after {
+            content: " | ";
+            color: #999;
+        }
+
+        .languages-list li:last-child::after {
+            content: "";
+        }
+
+        /* GDPR */
+        .gdpr {
+            margin-top: 10px;
+            padding-top: 6px;
+            border-top: 1px solid #ddd;
+        }
+
+        .gdpr p {
+            font-size: 8.5px;
+            color: #666;
+            text-align: justify;
+        }
+
+        /* Print styles */
+        @media print {
+            html, body {
+                width: 210mm;
+                height: 297mm;
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Łukasz Capała</h1>
+        <p class="title">.NET &amp; Angular Developer</p>
+        <div class="contact-info">
+            <span>Katowice / Remote</span>
+            <span>+48 667711900</span>
+            <span><a href="mailto:lukasz@capala.pl">lukasz@capala.pl</a></span>
+            <span><a href="https://www.capala.pl">https://www.capala.pl</a></span>
+            <span><a href="https://github.com/TheLukCraft">https://github.com/TheLukCraft</a></span>
+            <span><a href="https://www.linkedin.com/in/lukaszcapala/">LinkedIn</a></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>.NET &amp; Angular Developer with 2+ years of experience building web applications, from e-commerce platforms to booking systems. Specializing in developing efficient REST APIs with ASP.NET Core and creating responsive user interfaces with Angular. In a recent project, automated the quotation request process, reducing quote preparation time by over 80%.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <p class="skills-category"><strong>Backend:</strong> C#, .NET, ASP.NET Core, Entity Framework Core, REST API, xUnit</p>
+            <p class="skills-category"><strong>Frontend:</strong> Angular, TypeScript, HTML, CSS, Tailwind CSS</p>
+            <p class="skills-category"><strong>Databases:</strong> MS SQL Server, Redis, SQLite</p>
+            <p class="skills-category"><strong>Tools &amp; DevOps:</strong> Git, Docker, Postman</p>
+            <p class="skills-category"><strong>Practices:</strong> SOLID, Design Patterns, Clean Code, Unit Testing</p>
+        </section>
+
+        <section class="experience">
+            <h2>Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <h3>Freelancer — Full Stack Developer</h3>
+                    <span class="job-meta">06/2024 – Present | Chorzów</span>
+                </div>
+
+                <div class="project">
+                    <p class="project-title">Project: GORMI — E-commerce platform for custom products</p>
+                    <ul>
+                        <li>Replaced manual, email-based inquiry process with an automated form, reducing data collection time from 15 min to 3 min.</li>
+                        <li>Designed and implemented REST API in ASP.NET Core to manage product catalog, inquiries, and user accounts.</li>
+                        <li>Implemented session caching with Redis, decreasing server response time by ~70% (from ~500ms to ~150ms).</li>
+                    </ul>
+                    <p class="tech-stack"><strong>Tech stack:</strong> C#/.NET, ASP.NET, EF Core, SQL Server, Redis, Stripe, Angular, Tailwind CSS, RxJS, Docker</p>
+                    <p class="project-link"><strong>Link:</strong> <a href="https://www.gormi.pl/">https://www.gormi.pl/</a></p>
+                </div>
+
+                <div class="project">
+                    <p class="project-title">Project: ArtAuto — Vehicle fleet management and reservation system</p>
+                    <ul>
+                        <li>Developed online booking system with real-time availability calendar, reducing scheduling conflicts.</li>
+                        <li>Built interactive interface in Angular, using RxJS for asynchronous filtering and searching of vehicles.</li>
+                    </ul>
+                    <p class="tech-stack"><strong>Tech stack:</strong> C#/.NET, ASP.NET, EF Core, SQL Server, Angular, Tailwind CSS, RxJS, Docker</p>
+                    <p class="project-link"><strong>Link:</strong> <a href="https://artauto.com.pl/">https://artauto.com.pl/</a></p>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h3>MES Sp. z o. o. — Junior .NET Developer</h3>
+                    <span class="job-meta">09/2021 – 06/2022 | Kraków</span>
+                </div>
+                <ul>
+                    <li>Developed and maintained modules in a desktop .NET Framework (WinForms) application based on business specifications.</li>
+                    <li>Diagnosed and resolved reported bugs, improving application stability for end users.</li>
+                </ul>
+                <p class="tech-stack"><strong>Tech stack:</strong> C#/.NET Framework, WinForms, DevExpress, EF Core, SQL Server, Git</p>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h3>SUMA System — Intern</h3>
+                    <span class="job-meta">06/2020 – 09/2020 | Chorzów</span>
+                </div>
+                <ul>
+                    <li>Supported development team in testing and debugging code in a WPF-based application.</li>
+                    <li>Created responsive landing pages using HTML, CSS, and Bootstrap 4.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="edu-header">
+                    <h3>Jagiellonian University — Computer Science</h3>
+                    <span class="edu-meta">10/2022 – 09/2024 | Kraków</span>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="edu-header">
+                    <h3>Akademia Śląska (Silesian Academy) — BSc in Computer Science</h3>
+                    <span class="edu-meta">10/2017 – 03/2021 | Katowice</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="certifications">
+            <h2>Certifications</h2>
+            <ul class="cert-list">
+                <li>Software Engineer — HackerRank (09/2024)</li>
+                <li>Problem Solving (Intermediate) — HackerRank (09/2024)</li>
+                <li>REST API (Intermediate) — HackerRank (09/2024)</li>
+                <li>SQL (Intermediate) — HackerRank (09/2024)</li>
+            </ul>
+        </section>
+
+        <section class="languages">
+            <h2>Languages</h2>
+            <ul class="languages-list">
+                <li><strong>English:</strong> B2 (Professional Working Proficiency)</li>
+                <li><strong>Polish:</strong> Native</li>
+            </ul>
+        </section>
+
+        <section class="gdpr">
+            <p>I hereby give consent for my personal data included in my application to be processed for recruitment purposes in accordance with Regulation (EU) 2016/679 (GDPR).</p>
+        </section>
+    </main>
+</body>
+</html>
