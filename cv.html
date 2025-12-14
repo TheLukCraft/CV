@@ -1,398 +1,402 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Łukasz Capała - CV</title>
     <style>
-        @page {
-            size: A4;
-            margin: 0;
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 9pt;
-            line-height: 1.35;
-            color: #2d3748;
-            background: #fff;
-            width: 210mm;
-            min-height: 297mm;
-            padding: 12mm 14mm;
+
+        @page {
+            size: A4;
+            margin: 0;
         }
-        
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #2563eb;
-        }
-        
-        .header h1 {
-            font-size: 22pt;
-            font-weight: 700;
-            color: #1e3a5f;
-            margin-bottom: 2px;
-        }
-        
-        .header .subtitle {
-            font-size: 11pt;
-            color: #4a5568;
-            margin-bottom: 8px;
-        }
-        
-        .contact {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 6px 16px;
-            font-size: 8.5pt;
-        }
-        
-        .contact span {
-            white-space: nowrap;
-        }
-        
-        /* Sections */
-        .section {
-            margin-bottom: 8px;
-        }
-        
-        .section-title {
-            font-size: 11pt;
-            font-weight: 700;
-            color: #1e3a5f;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-bottom: 1px solid #cbd5e0;
-            padding-bottom: 2px;
-            margin-bottom: 6px;
-        }
-        
-        /* Summary */
-        .summary p {
-            text-align: justify;
-        }
-        
-        /* Skills */
-        .skills-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-        
-        .skill-row {
-            display: flex;
-        }
-        
-        .skill-label {
-            font-weight: 600;
-            color: #1e3a5f;
-            min-width: 95px;
-        }
-        
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            margin-top: 6px;
-        }
-        
-        .skill-tag {
-            background: #e0e7ff;
-            color: #3730a3;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 8pt;
-            font-weight: 600;
-        }
-        
-        /* Experience */
-        .job {
-            margin-bottom: 8px;
-        }
-        
-        .job:last-child {
-            margin-bottom: 0;
-        }
-        
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1px;
-        }
-        
-        .job-title {
-            font-weight: 700;
-            color: #1e3a5f;
-            font-size: 9.5pt;
-        }
-        
-        .job-date {
-            font-size: 8.5pt;
-            color: #718096;
-            white-space: nowrap;
-        }
-        
-        .project {
-            margin: 4px 0 4px 0;
-        }
-        
-        .project-name {
-            font-weight: 600;
-            color: #2563eb;
-            font-size: 9pt;
-        }
-        
-        .project-link {
-            font-size: 8pt;
-            margin-left: 5px;
-        }
-        
-        .job ul {
-            margin-left: 14px;
-            margin-top: 2px;
-        }
-        
-        .job li {
-            margin-bottom: 1px;
-        }
-        
-        .tech-stack {
-            font-size: 8pt;
-            color: #4a5568;
-            margin-top: 2px;
-        }
-        
-        .tech-stack strong {
-            color: #1e3a5f;
-        }
-        
-        /* Education & Certifications */
-        .two-columns {
-            display: grid;
-            grid-template-columns: 1.3fr 1fr;
-            gap: 20px;
-        }
-        
-        .edu-item, .cert-item {
-            margin-bottom: 4px;
-        }
-        
-        .edu-header, .cert-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-        
-        .edu-name, .cert-name {
-            font-weight: 600;
-            color: #1e3a5f;
-        }
-        
-        .edu-date, .cert-date {
-            font-size: 8pt;
-            color: #718096;
-        }
-        
-        .edu-degree, .cert-issuer {
-            font-size: 8.5pt;
-            color: #4a5568;
-        }
-        
-        /* Languages */
-        .languages {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .lang-item strong {
-            color: #1e3a5f;
-        }
-        
-        /* Footer */
-        .footer {
-            margin-top: 8px;
-            padding-top: 6px;
-            border-top: 1px solid #e2e8f0;
-            font-size: 7pt;
-            color: #a0aec0;
-            text-align: center;
-        }
-        
-        /* Print styles */
+
         @media print {
             body {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
-                padding: 10mm 12mm;
             }
-            
-            a {
-                color: #2563eb !important;
-            }
-            
-            .skill-tag {
-                background: #e0e7ff !important;
-                -webkit-print-color-adjust: exact;
-            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 9.5pt;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            padding: 15mm 15mm 12mm 15mm;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 26pt;
+            color: #2c3e50;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 11pt;
+            color: #555;
+            margin-bottom: 6px;
+        }
+
+        .contact {
+            font-size: 8.5pt;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .contact a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 11px;
+        }
+
+        .section-title {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #2c3e50;
+            border-bottom: 1.5px solid #3498db;
+            padding-bottom: 3px;
+            margin-bottom: 7px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary {
+            text-align: justify;
+            line-height: 1.45;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        .skill-item {
+            font-size: 9pt;
+        }
+
+        .skill-label {
+            font-weight: 600;
+            color: #2c3e50;
+            display: inline-block;
+            min-width: 85px;
+        }
+
+        .tech-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+
+        .badge {
+            background: #3498db;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 8.5pt;
+            font-weight: 600;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 10px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            font-size: 10pt;
+            color: #2c3e50;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .exp-period {
+            font-size: 8.5pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        .exp-location {
+            font-size: 8.5pt;
+            color: #666;
+            margin-bottom: 3px;
+        }
+
+        .project-name {
+            font-weight: 600;
+            color: #2980b9;
+            margin-top: 3px;
+            margin-bottom: 2px;
+            font-size: 9.5pt;
+        }
+
+        .exp-description {
+            margin-left: 0;
+            margin-top: 3px;
+        }
+
+        .exp-description li {
+            margin-bottom: 2px;
+            margin-left: 18px;
+        }
+
+        .tech-stack {
+            font-size: 8.5pt;
+            color: #555;
+            margin-top: 3px;
+            font-style: italic;
+        }
+
+        .project-link {
+            font-size: 8.5pt;
+            margin-top: 2px;
+        }
+
+        .project-link a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        .certifications {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px 12px;
+        }
+
+        .cert-item {
+            font-size: 9pt;
+        }
+
+        .cert-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .cert-issuer {
+            color: #666;
+            font-size: 8.5pt;
+        }
+
+        .languages {
+            display: flex;
+            gap: 20px;
+        }
+
+        .lang-item {
+            font-size: 9pt;
+        }
+
+        .lang-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .consent {
+            font-size: 7.5pt;
+            color: #666;
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+            line-height: 1.3;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
         }
     </style>
 </head>
 <body>
-    <header class="header">
+    <div class="header">
         <h1>Łukasz Capała</h1>
         <div class="subtitle">.NET & Angular Developer · Katowice / Remote</div>
         <div class="contact">
-            <span>📞 +48 667 711 900</span>
-            <span>✉️ <a href="mailto:lukasz@capala.pl">lukasz@capala.pl</a></span>
-            <span>🌐 <a href="https://www.capala.pl">capala.pl</a></span>
-            <span>💻 <a href="https://github.com/TheLukCraft">github.com/TheLukCraft</a></span>
-            <span>🔗 <a href="https://www.linkedin.com/in/lukaszcapala/">linkedin.com/in/lukaszcapala</a></span>
+            +48 667 711 900 • <a href="mailto:lukasz@capala.pl">lukasz@capala.pl</a> • <a href="https://www.capala.pl" target="_blank">www.capala.pl</a> • <a href="https://github.com/TheLukCraft" target="_blank">github.com/TheLukCraft</a> • <a href="https://www.linkedin.com/in/lukaszcapala/" target="_blank">linkedin.com/in/lukaszcapala</a>
         </div>
-    </header>
+    </div>
 
-    <section class="section summary">
-        <h2 class="section-title">Summary</h2>
-        <p>.NET & Angular Developer with 2+ years of experience building web applications, from e-commerce platforms to booking systems. I specialize in developing efficient REST APIs with ASP.NET Core and creating responsive user interfaces with Angular. In a recent project, I automated the quotation request process, reducing quote preparation time by over 80%.</p>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-list">
-            <div class="skill-row"><span class="skill-label">Backend:</span> C#, .NET, ASP.NET Core, Entity Framework Core, REST API, xUnit</div>
-            <div class="skill-row"><span class="skill-label">Databases:</span> MS SQL Server, Redis, SQLite</div>
-            <div class="skill-row"><span class="skill-label">Practices:</span> SOLID, Design Patterns, Clean Code, Unit Testing</div>
-            <div class="skill-row"><span class="skill-label">Frontend:</span> Angular, TypeScript, HTML, CSS, Tailwind CSS</div>
-            <div class="skill-row"><span class="skill-label">Tools & DevOps:</span> Git, Docker, Postman</div>
+    <div class="section">
+        <div class="section-title">Summary</div>
+        <div class="summary">
+            .NET & Angular Developer with 2+ years of experience building web applications, from e-commerce platforms to booking systems. I specialize in developing efficient REST APIs with ASP.NET Core and creating responsive user interfaces with Angular. In a recent project, I automated the quotation request process, reducing quote preparation time by over 80%.
         </div>
-        <div class="skill-tags">
-            <span class="skill-tag">ASP.NET Core</span>
-            <span class="skill-tag">Angular</span>
-            <span class="skill-tag">SQL Server</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Redis</span>
-        </div>
-    </section>
+    </div>
 
-    <section class="section">
-        <h2 class="section-title">Experience</h2>
+    <div class="section">
+        <div class="section-title">Skills</div>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <span class="skill-label">Backend:</span> C#, .NET, ASP.NET Core, Entity Framework Core, REST API, xUnit
+            </div>
+            <div class="skill-item">
+                <span class="skill-label">Frontend:</span> Angular, TypeScript, HTML, CSS, Tailwind CSS
+            </div>
+            <div class="skill-item">
+                <span class="skill-label">Databases:</span> MS SQL Server, Redis, SQLite
+            </div>
+            <div class="skill-item">
+                <span class="skill-label">Tools & DevOps:</span> Git, Docker, Postman
+            </div>
+            <div class="skill-item">
+                <span class="skill-label">Practices:</span> SOLID, Design Patterns, Clean Code, Unit Testing
+            </div>
+        </div>
+        <div class="tech-badges">
+            <span class="badge">ASP.NET Core</span>
+            <span class="badge">Angular</span>
+            <span class="badge">SQL Server</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Redis</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Experience</div>
         
-        <div class="job">
-            <div class="job-header">
-                <span class="job-title">Self-employed / Freelance — Full Stack Developer</span>
-                <span class="job-date">06/2024 – Present · Chorzów</span>
+        <div class="experience-item">
+            <div class="exp-header">
+                <div>
+                    <span class="exp-company">Self-employed / Freelance</span> — <span class="exp-title">Full Stack Developer</span>
+                </div>
+                <div class="exp-period">06/2024 – Present</div>
             </div>
+            <div class="exp-location">Chorzów</div>
             
-            <div class="project">
-                <span class="project-name">GORMI — E-commerce platform for custom products</span>
-                <a href="https://www.gormi.pl/" class="project-link">gormi.pl</a>
-            </div>
-            <ul>
+            <div class="project-name">Project: GORMI — E-commerce platform for custom products</div>
+            <ul class="exp-description">
                 <li>Replaced manual, email-based inquiry process with an automated form, reducing data collection time from 15 min to 3 min.</li>
                 <li>Designed and implemented REST API in ASP.NET Core to manage product catalog, inquiries, and user accounts.</li>
                 <li>Implemented session caching with Redis, decreasing server response time by ~70% (from ~500ms to ~150ms).</li>
             </ul>
-            <div class="tech-stack"><strong>Tech:</strong> C#/.NET, ASP.NET Core, EF Core, SQL Server, Redis, Stripe, Angular, Tailwind CSS, RxJS, Docker</div>
-            
-            <div class="project">
-                <span class="project-name">ArtAuto — Vehicle fleet management and reservation system</span>
-                <a href="https://artauto.com.pl/" class="project-link">artauto.com.pl</a>
-            </div>
-            <ul>
+            <div class="tech-stack">Tech stack: C#/.NET, ASP.NET, EF Core, SQL Server, Redis, Stripe, Angular, Tailwind CSS, RxJS, Docker</div>
+            <div class="project-link">Link: <a href="https://www.gormi.pl/" target="_blank">www.gormi.pl</a></div>
+
+            <div class="project-name">Project: ArtAuto — Vehicle fleet management and reservation system</div>
+            <ul class="exp-description">
                 <li>Developed an online booking system with a real-time availability calendar, reducing scheduling conflicts.</li>
                 <li>Built an interactive interface in Angular using RxJS for asynchronous filtering and searching of vehicles.</li>
             </ul>
-            <div class="tech-stack"><strong>Tech:</strong> C#/.NET, ASP.NET Core, EF Core, SQL Server, Angular, Tailwind CSS, RxJS, Docker</div>
+            <div class="tech-stack">Tech stack: C#/.NET, ASP.NET, EF Core, SQL Server, Angular, Tailwind CSS, RxJS, Docker</div>
+            <div class="project-link">Link: <a href="https://artauto.com.pl/" target="_blank">artauto.com.pl</a></div>
         </div>
 
-        <div class="job">
-            <div class="job-header">
-                <span class="job-title">MES Sp. z o. o. — Junior .NET Developer</span>
-                <span class="job-date">09/2021 – 06/2022 · Kraków</span>
+        <div class="experience-item">
+            <div class="exp-header">
+                <div>
+                    <span class="exp-company">MES Sp. z o. o.</span> — <span class="exp-title">Junior .NET Developer</span>
+                </div>
+                <div class="exp-period">09/2021 – 06/2022</div>
             </div>
-            <ul>
+            <div class="exp-location">Kraków</div>
+            <ul class="exp-description">
                 <li>Developed and maintained modules in a desktop .NET Framework (WinForms) application based on business specifications.</li>
                 <li>Diagnosed and resolved bugs, improving application stability for end users.</li>
             </ul>
-            <div class="tech-stack"><strong>Tech:</strong> C#/.NET Framework, WinForms, DevExpress, EF Core, SQL Server, Git</div>
+            <div class="tech-stack">Tech stack: C#/.NET Framework, WinForms, DevExpress, EF Core, SQL Server, Git</div>
         </div>
 
-        <div class="job">
-            <div class="job-header">
-                <span class="job-title">SUMA System — Intern</span>
-                <span class="job-date">06/2020 – 09/2020 · Chorzów</span>
+        <div class="experience-item">
+            <div class="exp-header">
+                <div>
+                    <span class="exp-company">SUMA System</span> — <span class="exp-title">Intern</span>
+                </div>
+                <div class="exp-period">06/2020 – 09/2020</div>
             </div>
-            <ul>
+            <div class="exp-location">Chorzów</div>
+            <ul class="exp-description">
                 <li>Supported development team in testing and debugging code in a WPF-based application.</li>
                 <li>Created responsive landing pages using HTML, CSS, and Bootstrap 4.</li>
             </ul>
         </div>
-    </section>
+    </div>
 
-    <section class="section">
-        <h2 class="section-title">Education</h2>
-        <div class="edu-item">
-            <div class="edu-header">
-                <span class="edu-name">Jagiellonian University</span>
-                <span class="edu-date">10/2022 – 09/2024 · Kraków</span>
-            </div>
-            <div class="edu-degree">Computer Science</div>
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="education-item">
+            <div class="exp-title">Jagiellonian University</div>
+            <div class="exp-location">Computer Science</div>
+            <div class="exp-period">10/2022 – 09/2024 · Kraków</div>
         </div>
-        <div class="edu-item">
-            <div class="edu-header">
-                <span class="edu-name">Akademia Śląska (Silesian Academy)</span>
-                <span class="edu-date">10/2017 – 03/2021 · Katowice</span>
-            </div>
-            <div class="edu-degree">BSc in Computer Science</div>
+        <div class="education-item">
+            <div class="exp-title">Akademia Śląska (Silesian Academy)</div>
+            <div class="exp-location">BSc in Computer Science</div>
+            <div class="exp-period">10/2017 – 03/2021 · Katowice</div>
         </div>
-    </section>
+    </div>
 
-    <section class="section">
-        <h2 class="section-title">Certifications</h2>
-        <div class="cert-item">
-            <div class="cert-header">
-                <span class="cert-name">Software Engineer</span>
-                <span class="cert-date">09/2024</span>
+    <div class="section">
+        <div class="section-title">Certifications</div>
+        <div class="certifications">
+            <div class="cert-item">
+                <div class="cert-name">Software Engineer</div>
+                <div class="cert-issuer">HackerRank · 09/2024</div>
             </div>
-            <div class="cert-issuer">HackerRank</div>
-        </div>
-        <div class="cert-item">
-            <div class="cert-header">
-                <span class="cert-name">Problem Solving, REST API, SQL (Intermediate)</span>
-                <span class="cert-date">09/2024</span>
+            <div class="cert-item">
+                <div class="cert-name">Problem Solving (Intermediate)</div>
+                <div class="cert-issuer">HackerRank · 09/2024</div>
             </div>
-            <div class="cert-issuer">HackerRank</div>
+            <div class="cert-item">
+                <div class="cert-name">REST API (Intermediate)</div>
+                <div class="cert-issuer">HackerRank · 09/2024</div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-name">SQL (Intermediate)</div>
+                <div class="cert-issuer">HackerRank · 09/2024</div>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <section class="section">
-        <h2 class="section-title">Languages</h2>
+    <div class="section">
+        <div class="section-title">Languages</div>
         <div class="languages">
-            <div class="lang-item"><strong>English</strong> — B2 (Professional Working Proficiency)</div>
-            <div class="lang-item"><strong>Polish</strong> — Native</div>
+            <div class="lang-item">
+                <span class="lang-name">English</span> — B2 (Professional Working Proficiency)
+            </div>
+            <div class="lang-item">
+                <span class="lang-name">Polish</span> — Native
+            </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="footer">
+    <div class="consent">
         I hereby give consent for my personal data included in my application to be processed for recruitment purposes in accordance with Regulation (EU) 2016/679 (GDPR).
-    </footer>
+    </div>
 </body>
 </html>
